@@ -1,0 +1,56 @@
+:root{--bg:#070411;--text:#f3ecff;--muted:#c9bbe8;--purple:#7f3dff;--pink:#cc4dff;--cyan:#58efff;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.16)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:'Outfit',sans-serif;color:var(--text);background:radial-gradient(circle at 80% 10%,#2a124d,var(--bg) 45%,#05030b 100%);overflow-x:hidden}
+.container{width:min(1100px,92%);margin:auto}.section{padding:90px 0;position:relative;z-index:2}
+#loader{position:fixed;inset:0;background:#06030f;display:grid;place-items:center;z-index:9999;transition:.5s}
+.loader-ring{width:62px;height:62px;border-radius:50%;border:4px solid rgba(255,255,255,.15);border-top-color:#cc4dff;animation:spin 1s linear infinite}
+.scroll-progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));z-index:100}
+
+.nav-wrap{position:sticky;top:0;z-index:50;background:rgba(5,4,11,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0}.logo{margin:0;font-size:2.2rem;font-weight:900;letter-spacing:.5px}
+.nav ul{display:flex;list-style:none;gap:16px;margin:0;padding:0}.nav a{text-decoration:none;color:var(--text);font-weight:600;opacity:.9}.nav a:hover{color:var(--cyan)}
+
+.hero{min-height:72vh;display:grid;place-items:center;text-align:center}
+.gradient-text{background:linear-gradient(90deg,#fff,#cc4dff,#58efff,#fff);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shineText 5s linear infinite}
+.hero h2{font-size:clamp(2.4rem,6vw,4.4rem);margin:.4rem 0}.hero h3{margin:0;color:var(--muted);font-weight:500}
+.pill{display:inline-block;padding:.35rem .85rem;border:1px solid var(--line);border-radius:999px;background:rgba(127,61,255,.2)}.lead{font-size:1.2rem}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.btn{padding:11px 18px;border-radius:12px;text-decoration:none;color:#fff;font-weight:700;background:linear-gradient(135deg,var(--purple),var(--pink));box-shadow:0 8px 30px rgba(204,77,255,.35);transition:.25s}
+.btn:hover{transform:translateY(-2px) scale(1.02)} .btn-ghost{background:transparent;border:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;backdrop-filter:blur(7px);box-shadow:0 10px 34px rgba(0,0,0,.35)}
+.project{margin-top:18px;transition:.25s}.project:hover{transform:translateY(-3px)}
+.project-link{color:var(--cyan);font-weight:700;text-decoration:none}.tiny{opacity:.85;margin-left:8px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.img-box{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.img-box img{width:100%;display:block;transition:transform .5s}.img-box:hover img{transform:scale(1.02)}
+
+.fx-band{height:34vh;position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(120deg,#180a31,#0b0620,#231041)}
+.fx1 .beam,.fx1 .beam2{position:absolute;top:-40%;left:-20%;width:50%;height:180%;background:linear-gradient(90deg,transparent,rgba(204,77,255,.28),transparent);transform:rotate(18deg);animation:beamMove 4s linear infinite}
+.fx1 .beam2{left:40%;animation-delay:1.8s}.fx1 .noise{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:soft-light;opacity:.22;animation:flicker 1.5s steps(2) infinite}
+.fx2{background:radial-gradient(circle at 30% 60%,#4f1ba8 0%,#100722 55%,#07040f 100%)}.fx2 .sweep{position:absolute;inset:-20%;background:conic-gradient(from 0deg,transparent 0 70%,rgba(88,239,255,.25),transparent 85% 100%);animation:spin 7s linear infinite}
+.fx2 .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:40px 40px;opacity:.22}
+.spark{position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 20px #fff,0 0 35px #cc4dff;animation:sparkFly 2.8s linear infinite}.spark1{left:12%;top:68%}.spark2{left:45%;top:30%;animation-delay:.9s}.spark3{left:75%;top:72%;animation-delay:1.6s}
+.fx3{background:linear-gradient(180deg,#0e061e,#1b0f33,#0a0517)}.ring{position:absolute;top:50%;left:50%;border:2px solid rgba(204,77,255,.45);border-radius:50%;transform:translate(-50%,-50%);animation:pulseRing 2.8s ease-out infinite}
+.ring1,.ring2,.ring3{width:90px;height:90px}.ring2{animation-delay:.9s}.ring3{animation-delay:1.8s}.pulse-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 30px var(--cyan)}
+.fx4{background:radial-gradient(circle at 20% 30%,#2e1460 0%,#100722 55%,#06040f 100%)}.comet{position:absolute;width:220px;height:4px;background:linear-gradient(90deg,transparent,#58efff,#cc4dff,transparent);top:25%;left:-20%;filter:drop-shadow(0 0 12px #58efff);animation:cometFly 3.2s linear infinite}.comet.c2{top:65%;animation-delay:1.4s}
+.scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0px,rgba(255,255,255,.04) 2px,transparent 2px,transparent 8px);animation:scanMove 2s linear infinite}
+.fx5{background:linear-gradient(180deg,#130826 0%,#2b1050 45%,#090512 100%)}.wave{position:absolute;left:-10%;width:120%;height:120px;border-radius:50%;border:2px solid rgba(204,77,255,.35);animation:waveRise 4s ease-in-out infinite}.w1{bottom:-30px}.w2{bottom:20px;animation-delay:1.2s}.w3{bottom:70px;animation-delay:2.4s}
+
+.reveal{opacity:0;transform:translateY(38px);transition:all .8s ease}.reveal.show{opacity:1;transform:translateY(0)}
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0}.orb{position:absolute;filter:blur(70px);border-radius:50%;opacity:.22;animation:float 10s ease-in-out infinite}
+.orb1{background:#7f3dff;width:360px;height:360px;top:-100px;left:-80px}.orb2{background:#cc4dff;width:420px;height:420px;bottom:-140px;right:-120px;animation-delay:2s}.orb3{background:#58efff;width:220px;height:220px;top:36%;left:60%;animation-delay:4s}
+.particles{position:fixed;inset:0;pointer-events:none;z-index:1}
+.particle{position:absolute;width:3px;height:3px;background:rgba(255,255,255,.8);border-radius:50%;animation:particleFloat linear infinite}
+
+@keyframes shineText{to{background-position:220% center}}
+@keyframes beamMove{0%{transform:translateX(-50%) rotate(18deg)}100%{transform:translateX(220%) rotate(18deg)}}
+@keyframes flicker{50%{opacity:.08}} @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sparkFly{0%{transform:translate(0,0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translate(240px,-140px) scale(1.2);opacity:0}}
+@keyframes pulseRing{0%{opacity:.9;transform:translate(-50%,-50%) scale(.3)}100%{opacity:0;transform:translate(-50%,-50%) scale(4.2)}}
+@keyframes cometFly{0%{transform:translateX(0) rotate(-8deg);opacity:0}10%{opacity:1}100%{transform:translateX(140vw) rotate(-8deg);opacity:0}}
+@keyframes scanMove{from{transform:translateY(0)}to{transform:translateY(8px)}}
+@keyframes waveRise{0%,100%{transform:translateY(0) scaleX(1);opacity:.45}50%{transform:translateY(-18px) scaleX(1.03);opacity:.8}}
+@keyframes float{50%{transform:translateY(-25px) translateX(14px)}}
+@keyframes particleFloat{to{transform:translateY(-120vh);opacity:0}}
+
+@media (max-width:900px){.nav ul{flex-wrap:wrap;gap:10px}.fx-band{height:28vh}.logo{font-size:1.9rem}}

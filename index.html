@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taimoor Atif | Portfolio</title>
+  <meta name="description" content="Portfolio of Taimoor Atif" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loader"><div class="loader-ring"></div></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="bg-orbs">
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+  </div>
+  <div class="particles" id="particles"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <h1 class="logo">TAIMOOR</h1>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" class="section hero reveal">
+      <div class="container">
+        <p class="pill">👑 Personal Portfolio</p>
+        <h2 class="gradient-text">Taimoor Atif</h2>
+        <h3>Student at NUST CoEME || Intern at Arch Technologies</h3>
+        <p class="lead">To be artful in everything i can touch</p>
+        <div class="hero-btns">
+          <a class="btn magnetic" href="#projects">View Projects</a>
+          <a class="btn btn-ghost magnetic" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="fx-band fx1"><div class="beam"></div><div class="beam beam2"></div><div class="noise"></div></section>
+
+    <section id="background" class="section reveal">
+      <div class="container card">
+        <h2>📘 Background</h2>
+        <p><strong>Education:</strong> Intermediate, currently doing Bachelor's</p>
+      </div>
+    </section>
+
+    <section class="fx-band fx2">
+      <div class="sweep"></div><div class="grid-lines"></div>
+      <div class="spark spark1"></div><div class="spark spark2"></div><div class="spark spark3"></div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2>🚀 Projects</h2>
+
+        <article class="card project reveal">
+          <h3>Bluetooth-Controlled Robotic Car 🏎️</h3>
+          <p>A fully functional robotic car controlled wirelessly via smartphone Bluetooth technology.</p>
+          <ul>
+            <li><strong>Wireless Control:</strong> Controlled via mobile app through HC-05.</li>
+            <li><strong>Microcontroller:</strong> Arduino Uno for command processing.</li>
+            <li><strong>Dual-Motor Drive:</strong> L298N H-Bridge control.</li>
+            <li><strong>Power Efficiency:</strong> Li-ion batteries + custom switch.</li>
+            <li><strong>Speed:</strong> 1.47 km/h average during testing.</li>
+          </ul>
+          <p><strong>Your Role:</strong> Documentation of said project and Speed recordings.</p>
+          <p><strong>Contributors:</strong></p>
+          <ul>
+            <li>Muhammad Hashir Ehtisham (543606) — Programming & Wiring of the Project.</li>
+            <li>Taimoor Atif (548296) — Documentation of said project and Speed recordings.</li>
+            <li>Lameea Mubashir Khan (570918) — Designing & Physical Layout of the Car.</li>
+            <li>Tooba Fatima (577687) — Designing Exterior of the Car.</li>
+          </ul>
+          <a class="project-link" target="_blank" href="https://github.com/hashir-ehtisham/Arduino-uno-car-project">Click here</a>
+          <span class="tiny">to view this project</span>
+        </article>
+
+        <article class="card project reveal">
+          <h3>Mini Hydroelectric Power Generation Model 💧⚡</h3>
+          <p>I built a working mini hydroelectric power generation model based on the same principle used in traditional water wheels and modern hydroelectric plants.</p>
+          <p>Water is stored at a higher level and allowed to fall due to gravity. As it flows, it strikes a turbine wheel, rotating it. This rotation drives a generator, converting mechanical energy into electrical energy.</p>
+          <p><strong>Energy conversion:</strong> Gravitational potential → kinetic → mechanical → electrical.</p>
+          <p>This model demonstrates the generation stage of hydroelectric systems and reflects the idea used in pumped-storage plants, where water is reused by moving it back to a higher level during low-demand periods.</p>
+          <p><strong>What we learned:</strong></p>
+          <ul>
+            <li>How water height affects power generation.</li>
+            <li>How moving water creates rotational motion.</li>
+            <li>How generators convert motion into electricity.</li>
+            <li>Basic efficiency and energy-loss concepts.</li>
+          </ul>
+          <div class="img-box">
+            <img id="hydroImg" src="assets/hydroelectric-project.jpg" alt="Mini hydroelectric model demonstration" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="fx-band fx3"><div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div><div class="pulse-dot"></div></section>
+
+    <section id="skills" class="section reveal">
+      <div class="container card">
+        <h2>🧠 Skills</h2>
+        <div class="skills-grid">
+          <div><h4>Languages</h4><p>English, Urdu, Punjabi</p></div>
+          <div><h4>Programming</h4><p>C++, Python, HTML, CSS, JavaScript</p></div>
+          <div><h4>Literature</h4><p>Masterful Poetry, Book writing</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fx-band fx4"><div class="comet"></div><div class="comet c2"></div><div class="scan"></div></section>
+
+    <section id="experience" class="section reveal">
+      <div class="container card">
+        <h2>💼 Experience</h2>
+        <p><strong>Web Development Intern — Arch Technologies</strong> (2 months)</p>
+        <p><strong>Currently:</strong> Bachelor's Student</p>
+      </div>
+    </section>
+
+    <section class="fx-band fx5"><div class="wave w1"></div><div class="wave w2"></div><div class="wave w3"></div></section>
+
+    <section id="contact" class="section reveal">
+      <div class="container card">
+        <h2>📩 Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:meimbatman.47@gmail.com">meimbatman.47@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/taimoor-atif-209326385">www.linkedin.com/in/taimoor-atif-209326385</a></p>
+        <p><strong>GitHub:</strong> <a target="_blank" href="https://github.com/Taimoor0000">https://github.com/Taimoor0000</a></p>
+        <p><strong>Instagram:</strong> <a target="_blank" href="https://www.instagram.com/tai.moo.r/">https://www.instagram.com/tai.moo.r/</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
